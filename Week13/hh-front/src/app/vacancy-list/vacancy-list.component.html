@@ -1,0 +1,32 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: lightslategray;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Description</th>
+    <th>Salary</th>
+    <th>Company</th>
+  </tr>
+  <tr *ngFor="let vacancy of vacancies">
+    <td>{{vacancy.name}}</td>
+    <td>{{vacancy.description}}</td>
+    <td>{{vacancy.salary}}</td>
+    <td>{{vacancy.company_id}}</td>
+  </tr>
+</table>

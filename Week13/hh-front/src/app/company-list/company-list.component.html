@@ -1,0 +1,29 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: lightslategray;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngFor="let company of companies">
+    <td><a routerLink="companies/{{company.id}}/vacancies">{{company.name}}</a></td>
+    <td>{{company.description}}</td>
+  </tr>
+</table>
+
